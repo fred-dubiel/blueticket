@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="event_index" path="/" methods="GET">
+        <default key="_controller">AdminBundle:Event:index</default>
+    </route>
+
+    <route id="event_show" path="/show/{id}" methods="GET">
+        <default key="_controller">AdminBundle:Event:show</default>
+    </route>
+
+    <route id="event_new" path="/new" methods="GET|POST">
+        <default key="_controller">AdminBundle:Event:new</default>
+    </route>
+
+    <route id="event_edit" path="/edit/{id}" methods="GET|POST">
+        <default key="_controller">AdminBundle:Event:edit</default>
+    </route>
+
+    <route id="event_delete" path="/delete/{id}" methods="DELETE">
+        <default key="_controller">AdminBundle:Event:delete</default>
+    </route>
+
+</routes>
